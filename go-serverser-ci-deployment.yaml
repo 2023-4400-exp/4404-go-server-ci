@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: go-serverser-ci
+  name: go-serverser-ci
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: go-serverser-ci
+  template:
+    metadata:
+      labels:
+        app: go-serverser-ci
+    spec:
+      containers:
+      - image: ruminaaaaaaaaaaa/go-serverser-ci
+        name: go-serverser-ci
+
